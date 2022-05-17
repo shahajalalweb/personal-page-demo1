@@ -1,0 +1,216 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*container*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1ft);
+
+}
+
+/*nav bar */
+.nav {
+    grid-column: 1 / -1;
+    background-color: rgb(229, 238, 238);
+    height: 50px;
+}
+.nav:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* logo and heading text*/
+.logo {
+margin: 9px 20px;
+display: inline-block;
+}
+.logo img {
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+.logo h3 {
+    padding: 5px;
+    margin-left: 40px;
+}
+.logo h2 {
+    margin-left: 40px;
+    display: none;
+    font-size: 20px;
+    padding: 4px;
+}
+@media (max-width: 650px) {
+    .logo h3 {
+        display:none;
+    }
+    .logo h2 {
+        display: block;
+    }
+}
+
+/* menu part */
+.menu {
+    float: right;
+    margin-right: 30px;
+
+}
+
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+.menu ul li a {
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    padding: 13px 10px;
+}
+.menu ul li a:hover{
+    color: rgb(150, 137, 137);
+
+}
+.input {
+    display: none;
+}
+.menubar {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    
+    .menu ul {
+        right: -100%;
+        position: fixed;
+        margin-top: 50px;
+        background-color: rgb(229, 238, 238);
+        transition: all .3s;
+    }
+    .menu ul li {
+      display: inline;      
+    }
+    .menu ul li a {
+        padding: 20px 50px 20px 60px;
+    }
+    .menu ul li a:hover {
+        background-color: rgb(252, 255, 254);
+        
+    }
+
+    #check:checked ~ .menu ul{
+        right: 0px;
+    }
+
+    .menubar {
+        display: block;
+        margin-right: 15px;
+        width: 25px;
+        height: 25px;
+        padding: 12px;
+        float: right;
+    }
+}
+
+/*banar img*/
+.banar {
+    grid-column: 1 / -1;  
+    margin: 50px;
+    display: block
+}
+
+.banartxt{
+    width: 48%;
+    height: 400px;
+    float: left;
+}
+.banartxt p {
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+@media (max-width: 1000px) {
+    .banartxt p {
+        padding:0px;
+    }
+}
+.banarimg {
+    width: 48%;
+    height: auto;
+    float: right;
+    transition: transform .1s ease;
+}
+.banarimg:hover {
+    transform: scale(1.05);
+}
+.banarimg img{
+    width: 100%;
+    height: auto;
+    border: 0px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media (max-width: 650px) {
+    .banartxt {
+        width: 100%;
+    }
+    .banarimg{
+        width: 100%;
+    }
+}
+
+
+/* connected */
+.connected {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+.connecth2 {
+    padding: 30px;
+    flex: 100%;
+    background-color: antiquewhite;
+    margin-bottom: 40px;
+    text-align: center;
+    border: 1px solid rgb(192, 185, 185);
+    font-family: 'Lobster', cursive;
+}
+.connect {
+    flex: 20%;
+    margin: 10px;
+    transition: transform .5s ease;
+}
+.connect:hover{
+    transform: scale(1.05);
+}
+
+.connect img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.connectP{
+    padding: 10px 0px 5px 0px;
+    margin: 0 auto ;
+    height: 30px;
+    width: 200px;
+    background-color: rgb(121, 119, 116);
+    color: white ;
+    font-family: 'Dancing Script', cursive;
+    transition: .3s;
+}
+.connectP:hover {
+    border: 0px;
+    border-radius: 20px;
+    background-color: rgb(126, 93, 93)
+}
+.connectP p a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 255, 72);
+    font-family: 'Tapestry', cursive;
+}
